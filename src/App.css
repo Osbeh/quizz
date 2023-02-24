@@ -1,0 +1,26 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.answers {
+  width:50rem;
+  margin: auto;
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: rgba(56, 56, 61, 0.5);
+}
+
+.activeButton {
+  background-color: blue;
+}
+
+.incorrectButton {
+  background-color: red;
+}
+
+.correctButton {
+  background-color: green;
+}
