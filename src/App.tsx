@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Answers from './components/Answers'
 import getQuestion from './hooks/getQuestion'
 import Heart from './components/Heart'
+import GameOver from './components/GameOver'
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
   const [refetch, setRefetch] = useState("")
   const [skipUsed, setSkipUsed] = useState(false)
   const [removeTwoUsed, setRemoveTwoUsed] = useState(false)
-  const [lives, setLives] = useState(3)
+  const [lives, setLives] = useState(1)
 
   const { data, isLoading, isError, status} = getQuestion(refetch, count)
 
@@ -67,18 +68,13 @@ function App() {
 
   return (
     <div className="App">
-      <div style={{position:"absolute", top:"2rem", right:"2rem"}}>Your score: {count}</div>
-      <div style={{position:"absolute", top:"2rem", left:"2rem", display:"flex", flexDirection:"row", gap:"1rem"}}>
+      <div style={{position:"absolute", top:"5rem", right:"2rem"}}>Your score: {count}</div>
+      <div style={{position:"absolute", top:"5rem", left:"2rem", display:"flex", flexDirection:"row", gap:"1rem"}}>
         {livesArray.map((value: undefined, index: number) => (
               <Heart key={index}/>
             ))}
       </div>
-      
-          {gameOver? <>
-            <h2>Game Over</h2>
-            Your score was {count} 
-            <button onClick={() => retryGame()}>Try again</button>
-          </>
+          {gameOver? <GameOver count={count} retryGame={retryGame} />
             : 
           <> 
             <h2>{decodeURIComponent(data.results[0].question)}</h2>
