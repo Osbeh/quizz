@@ -1,2 +1,2 @@
 # quizz
-Quiz Game - REACT + TS
+Quiz Game Frontend - REACT + TS
