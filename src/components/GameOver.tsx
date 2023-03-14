@@ -1,9 +1,8 @@
-import axios from "axios"
 import React, { useState } from "react"
-import { Button, Form, FormControlProps } from "react-bootstrap"
-import FormCheckInput from "react-bootstrap/esm/FormCheckInput"
+import { Button, Form } from "react-bootstrap"
 import { useNavigate } from "react-router-dom"
 import { axiosPost } from "../api/axioshiscore"
+import styles from "../styles/GameOver.module.css"
 
 type GameOverProps = {
     count: number,
@@ -19,12 +18,12 @@ export default function GameOver({ count, retryGame }:GameOverProps) {
 
     const handleSubmit = (event:React.FormEvent) => {
         event.preventDefault();
-        axiosPost({"name":input, "score":count}).then(res => navigate("/highscores")).catch(err => console.error(err))
+        axiosPost({"name":input, "score":count}).then(res => navigate("/highscores", {state:count})).catch(err => console.error(err))
       }
 
     return (
-        <div className="gameOver">
-            <h2>Game Over</h2>
+        <div className={styles.gameOver}>
+            <h2 className={styles.header}>Game Over</h2>
             Your score was {count}
             <Form className="inputForm" onSubmit={handleSubmit}>
                 <Form.Label>Your initials: </Form.Label>

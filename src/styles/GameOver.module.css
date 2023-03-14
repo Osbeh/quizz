@@ -1,0 +1,11 @@
+.gameOver {
+    background-color: rgba(56, 56, 61, 0.5);
+    width: 30rem;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.header {
+    color: brown;
+}

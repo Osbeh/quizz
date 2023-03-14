@@ -12,7 +12,7 @@ function App() {
   const [refetch, setRefetch] = useState("")
   const [skipUsed, setSkipUsed] = useState(false)
   const [removeTwoUsed, setRemoveTwoUsed] = useState(false)
-  const [lives, setLives] = useState(1)
+  const [lives, setLives] = useState(3)
 
   const { data, isLoading, isError, status} = getQuestion(refetch, count)
 
