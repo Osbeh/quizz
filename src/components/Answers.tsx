@@ -33,26 +33,15 @@ export default function Answers({ correctAnswer, incorrectAnswers, gameControl, 
             [array[i], array[j]] = [array[j], array[i]];
         }
     }
-
    
     shuffleArray(answers)
     
-
-    let objArr: answerObject[] = []
-    answers.map((item, index) => {
-        let obj =  Object.assign({id: index, text:item, clicked:false})
-        objArr?.push(obj)
-     })
-
-     console.log(correctAnswer)
-     console.log(objArr)
-    
     return (
         <div className="answers">
-                {objArr.map((answer) => (
-                    <Answer key={answer.text} answer={answer} correctAnswer={correctAnswer} gameControl={gameControl}/>
+                {answers.map((answer) => (
+                    <Answer key={answer} answer={answer} correctAnswer={correctAnswer} gameControl={gameControl}/>
                 ) )}
                 <GameButtons gameControl={gameControl} skipUsed={skipUsed} removeTwo={removeTwo} removeTwoUsed={removeTwoUsed}/>
         </div>
     )
-}
+} 
