@@ -18,6 +18,7 @@ export default function Highscores() {
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(false)
     const [topTen, setTopTen] = useState<HighScoreProp[]>([])
+    const [seeAll, setSeeAll] = useState(false)
 
     const location = useLocation()
     const navigate = useNavigate()
@@ -40,19 +41,22 @@ export default function Highscores() {
    if (loading) return <div>Loading...</div>
    if (error) return <div>Something went wrong...</div>
 
-   console.log(location.state)
-
     return (
         <div className={styles.highscores}>
             <h2>Top players:</h2>
             <ol className={styles.scoreList}>
-            {topTen.map((highscore) => (
+            {seeAll ? highScores.map((highscore) => (
                 <Score key={highscore._id} name={highscore.name} score={highscore.score}/>
             ))
+             :
+            topTen.map((highscore) => (
+                <Score key={highscore._id} name={highscore.name} score={highscore.score}/>
+            )) 
             }
             </ol>
             {location.state && `Your score was ${location.state}`}
             <button onClick={() => navigate("/")}>Play again</button>
+            <button onClick={() => setSeeAll(!seeAll)}>{seeAll ? "See Top10" : "See all"}</button>
         </div>
     )
 }

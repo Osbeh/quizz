@@ -13,6 +13,14 @@
   background-color: rgba(56, 56, 61, 0.5);
 }
 
+.defaultButton {
+  box-shadow: 5px 5px 10px black;
+}
+
+.defaultButton:hover {
+  box-shadow: 0px 0px black;
+}
+
 .activeButton {
   background-color: blue;
 }
@@ -25,36 +33,6 @@
   background-color: green;
 }
 
-.nav {
-  background-color: rgba(56, 56, 61, 0.5);
-  color:white;
-  display:flex;
-  justify-content: space-between;
-  align-items: stretch;
-  gap: 2rem;
-  padding: 0 1rem;
-}
-
-.nav ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display:flex;
-  gap: 1rem;
-}
-
-.nav a {
-  color: inherit;
-  text-decoration: none;
-  /* height:90%; */
-  display:flex;
-  align-items: center;
-  /* padding: .25rem; */
-  padding:0.5rem;
-}
-
-
-
 .nav li.active {
   background-color: #555;
 }
@@ -63,11 +41,11 @@
   background-color: #777;
 }
 
-.nav a:hover {
+/* .nav a:hover {
   background-color: #000;
   border-radius:5px;
   color:#646cff;
-}
+} */
 
 .title {
   font-size: 2rem;

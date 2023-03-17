@@ -12,7 +12,7 @@ type Answer = {
 
 export default function Answer ({ answer, correctAnswer, gameControl }:Answer) {
 
-    const [btnClass, setBtnClass] = useState<string>("")
+    const [btnClass, setBtnClass] = useState<string>("defaultButton")
 
     
     // function chooseAnswer(chosenAnswer:answerObject) {
