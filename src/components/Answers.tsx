@@ -37,11 +37,13 @@ export default function Answers({ correctAnswer, incorrectAnswers, gameControl, 
     shuffleArray(answers)
     
     return (
-        <div className="answers">
-                {answers.map((answer) => (
-                    <Answer key={answer} answer={answer} correctAnswer={correctAnswer} gameControl={gameControl}/>
-                ) )}
-                <GameButtons gameControl={gameControl} skipUsed={skipUsed} removeTwo={removeTwo} removeTwoUsed={removeTwoUsed}/>
-        </div>
+        // <div className="answers">
+        <>
+            {answers.map((answer) => (
+                <Answer key={answer} answer={answer} correctAnswer={correctAnswer} gameControl={gameControl}/>
+            ) )}
+            <GameButtons gameControl={gameControl} skipUsed={skipUsed} removeTwo={removeTwo} removeTwoUsed={removeTwoUsed}/>
+        </>
+        // </div>
     )
 } 

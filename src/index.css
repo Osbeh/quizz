@@ -73,12 +73,25 @@ button:focus-visible {
   }
 }
 
+/*.answers {
+  width:50rem;
+  margin: auto;
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: rgba(56, 56, 61, 0.5);
+} */
+
+
 @layer components {
   .nav {
-    @apply bg-gray-900 flex items-stretch justify-between text-white;
+    @apply bg-zinc-800 flex items-stretch justify-between text-white;
   }
   .nav-item {
-    @apply text-orange-800 font-bold text-3xl p-2 m-2 bg-gray-800 rounded-sm cursor-pointer
-    hover:text-white hover:rounded-xl hover:bg-orange-900 transition-all duration-300 ease-linear;
+    @apply text-indigo-700 font-bold text-3xl p-2 m-3 bg-zinc-900 rounded-sm cursor-pointer
+    hover:text-white hover:rounded-xl hover:bg-indigo-900 transition-all duration-500 ease-linear;
+  }
+
+  .answers {
+    @apply w-1/2 m-auto bg-zinc-800 p-6 rounded-md;
   }
 }

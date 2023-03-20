@@ -7,7 +7,7 @@ export default function RootApp() {
     return (
         <>
         <NavBar/>
-        <h1>Quizz!</h1>
+        <h1 className="m-4 font-semibold font-mono text-indigo-700">Quizz!</h1>
             <Routes>
                 <Route path="/" element={<App/>} />
                 <Route path="/highscores" element={<Highscores/>}/>

@@ -1,17 +1,14 @@
 #root {
-  /* max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem; */
   text-align: center;
 }
 
-.answers {
+/* .answers {
   width:50rem;
   margin: auto;
   padding: 0.5rem;
   border-radius: 10px;
   background-color: rgba(56, 56, 61, 0.5);
-}
+} */
 
 .defaultButton {
   box-shadow: 5px 5px 10px black;
@@ -33,23 +30,6 @@
   background-color: green;
 }
 
-.nav li.active {
-  background-color: #555;
-}
-
-.nav li:hover {
-  background-color: #777;
-}
-
-/* .nav a:hover {
-  background-color: #000;
-  border-radius:5px;
-  color:#646cff;
-} */
-
-.title {
-  font-size: 2rem;
-}
 
 .inputForm {
   display: flex;

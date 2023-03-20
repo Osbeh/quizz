@@ -76,10 +76,12 @@ function App() {
       </div>
           {gameOver? <GameOver count={count} retryGame={retryGame} />
             : 
-          <> 
-            <h2>{decodeURIComponent(data.results[0].question)}</h2>
+          <div className='answers'> 
+            <h2 className="text-orange-700 text-xl font-semibold mb-4">
+              {decodeURIComponent(data.results[0].question)}
+            </h2>
             <Answers correctAnswer={correctAnswer} incorrectAnswers={incAnswers} gameControl={gameControl} skipUsed={skipUsed} removeTwoUsed={removeTwoUsed}/>
-          </>
+          </div>
         }
     </div>
   )
